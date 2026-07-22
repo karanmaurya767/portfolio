@@ -12,114 +12,26 @@
  * Each export is consumed by the component named in its comment.
  */
 
-/* ============================================================
-   DESIGN TOKENS — copy/paste into app/globals.css during the
-   design-system step of the tutorial.
-   (1) goes inside `@theme inline { ... }`
-   (2) + (3) go inside `:root { ... }`
-   ============================================================
-
-   (1) Editorial --color-* entries — paste inside `@theme inline`:
-
-    // Editorial design tokens: surfaces
-    --color-canvas: var(--canvas);
-    --color-canvas-soft: var(--canvas-soft);
-    --color-surface-card: var(--surface-card);
-    --color-surface-strong: var(--surface-strong);
-
-    // Hairlines
-    --color-hairline: var(--hairline);
-    --color-hairline-soft: var(--hairline-soft);
-    --color-hairline-strong: var(--hairline-strong);
-
-    // Text
-    --color-ink: var(--ink);
-    --color-body: var(--body);
-    --color-body-strong: var(--body-strong);
-    --color-muted-ink: var(--muted-ink);
-    --color-muted-soft: var(--muted-soft);
-    --color-on-primary: var(--on-primary);
-
-    // Brand
-    --color-primary-active: var(--primary-active);
-
-    // Overlay pair: light cream type + dark scrim ink
-    --color-overlay-cream: var(--overlay-cream);
-    --color-overlay-ink: var(--overlay-ink);
-
-    // Terminal palette — macOS-style window dots
-    --color-term-red: var(--term-red);
-    --color-term-yellow: var(--term-yellow);
-    --color-term-green: var(--term-green);
-
-    // Semantic
-    --color-success: var(--success);
-    --color-error: var(--error);
-
-   ------------------------------------------------------------
-
-   (2) Editorial :root values — paste inside `:root`:
-
-    // Brand accent: used scarcely, primary CTAs + wordmark only
-    --primary: #f54e00;
-    --primary-foreground: #ffffff;
-    --primary-active: #d04200;
-    --on-primary: #ffffff;
-
-    // Surfaces: warm cream canvas, never pure white
-    --canvas: #f7f7f4;
-    --canvas-soft: #fafaf7;
-    --surface-card: #ffffff;
-    --surface-strong: #e6e5e0;
-
-    // Hairlines: depth via 1px lines, no shadows
-    --hairline: #e6e5e0;
-    --hairline-soft: #efeee8;
-    --hairline-strong: #cfcdc4;
-
-    // Text: warm near-black ink
-    --ink: #26251e;
-    --body: #5a5852;
-    --body-strong: #26251e;
-    --muted-ink: #807d72;
-    --muted-soft: #a09c92;
-
-    // Terminal palette — macOS-style window dots (stack.config mock only)
-    --term-red: #ff5f57;
-    --term-yellow: #febc2e;
-    --term-green: #28c840;
-
-    // Overlay pair: cream type + ink scrim for media-backed regions
-    --overlay-cream: #f7f6f1;
-    --overlay-ink: #0f0f0c;
-
-    // Semantic
-    --success: #1f8a65;
-    --error: #cf2d56;
-
-   ------------------------------------------------------------
-
-   (3) Shadcn -> editorial remap — paste inside `:root`
-       (replace the starter's standalone shadcn default values):
-
-    --background: var(--canvas);
-    --foreground: var(--ink);
-    --card: var(--surface-card);
-    --card-foreground: var(--ink);
-    --popover: var(--surface-card);
-    --popover-foreground: var(--ink);
-    --secondary: var(--surface-strong);
-    --secondary-foreground: var(--ink);
-    --muted: var(--canvas-soft);
-    --muted-foreground: var(--body);
-    --accent: var(--hairline-soft);
-    --accent-foreground: var(--ink);
-    --destructive: var(--error);
-    --border: var(--hairline);
-    --input: var(--hairline);
-    --ring: var(--hairline-strong);
-
-   ============================================================ */
+// --- Site identity --------------------------------------------------------
+export const SITE = {
+  name: "Karan Maurya",
+  shortName: "Karan",
+  role: "AI-First Full-Stack Engineer",
+  location: "India · GMT +5:30",
+  email: "kmkaranmaurya767@gmail.com",
+  emailShort: "kmkaranmaurya767",
+  github: "https://github.com/karanmaurya767",
+  githubHandle: "karanmaurya767",
+  linkedin: "https://www.linkedin.com/in/karanmaurya767",
+  twitter: "https://x.com/karanmaurya767",
+  // Hero headline copy.
+  heroEyebrow: "Independent · Available for selected product builds",
+  heroTitle: "Building the next generation of AI-first products.",
+  heroSubtitle:
+    "I'm Karan — a full-stack engineer and product designer based in India. I help early-stage teams ship AI SaaS products end-to-end: from workflow design and architecture to the production interface.",
+  heroCtaPrimary: "See selected work",
+  heroCtaSecondary: "Start a project",
+} as const
 
 // --- Site header ----------------------------------------------------------
 // components/site-header.tsx — primary + mobile nav.
@@ -357,21 +269,22 @@ export const FOOTER_COLUMNS = [
       ["Approach", "#process"],
       ["Stack", "#stack"],
       ["About", "#about"],
+      ["Contact", "#contact"],
     ],
   },
   {
     title: "Contact",
     links: [
-      ["codebucks.agency", "mailto:codebucks27@gmail.com"],
+      ["Email", "mailto:kmkaranmaurya767@gmail.com"],
       ["Start a project", "#contact"],
     ],
   },
   {
     title: "Social",
     links: [
-      ["GitHub ↗", "https://github.com/codebucks27"],
-      ["LinkedIn ↗", "https://www.linkedin.com/in/codebucks/"],
-      ["X / Twitter ↗", "https://x.com/code_bucks"],
+      ["GitHub", "https://github.com/karanmaurya767"],
+      ["LinkedIn", "https://www.linkedin.com/in/karanmaurya767"],
+      ["X / Twitter", "https://x.com/karanmaurya767"],
     ],
   },
 ] as const
@@ -393,58 +306,3 @@ export const TOKEN_USAGE: UsageRow[] = [
   { model: "Haiku 4.5", vendor: "Anthropic", tokens: 1_140_000, costUsd: 19 },
   { model: "GPT-5", vendor: "OpenAI", tokens: 730_000, costUsd: 12 },
 ]
-
-
-/* 
-Navigation Bar Variants:
-
-type Variant = "overlay" | "solid"
-
-const VARIANT_STYLES: Record<
-  Variant,
-  {
-    header: string
-    wordmark: string
-    nav: string
-    navLink: string
-    action: string
-    //  Hamburger / close trigger shown on small screens.
-    trigger: string
-    // Mobile dropdown panel surface.
-    panel: string
-    //  Links inside the mobile panel. 
-    panelLink: string
-    //  Hairline divider inside the mobile panel. 
-    panelDivider: string
-  }
-> = {
-  overlay: {
-    header: "",
-    wordmark: "text-overlay-cream",
-    nav: "text-overlay-cream/95",
-    navLink: "hover:text-overlay-cream",
-    action:
-      "border-overlay-cream/55 bg-overlay-ink/55 text-overlay-cream backdrop-blur-[6px] hover:bg-overlay-ink/70",
-    trigger:
-      "border-overlay-cream/55 bg-overlay-ink/55 text-overlay-cream backdrop-blur-[6px] hover:bg-overlay-ink/70",
-    panel:
-      "border-overlay-cream/15 bg-overlay-ink/85 text-overlay-cream backdrop-blur-xl",
-    panelLink: "text-overlay-cream/85 hover:text-overlay-cream",
-    panelDivider: "bg-overlay-cream/12",
-  },
-  solid: {
-    header: "border-b border-hairline bg-canvas/85 backdrop-blur",
-    wordmark: "text-ink",
-    nav: "text-body",
-    navLink: "hover:text-ink",
-    action:
-      "border-hairline-strong bg-surface-card text-ink hover:bg-surface-strong",
-    trigger:
-      "border-hairline-strong bg-surface-card text-ink hover:bg-surface-strong",
-    panel: "border-hairline bg-canvas/95 text-ink backdrop-blur-xl",
-    panelLink: "text-body hover:text-ink",
-    panelDivider: "bg-hairline",
-  },
-}
-
-*/

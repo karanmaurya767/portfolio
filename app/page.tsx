@@ -1,13 +1,30 @@
-// We'll replace this piece by piece as we build each section in the video.
+// Full portfolio page — assembles every section from components/.
+import { SiteHeader } from "@/components/site-header"
+import { SiteFooter } from "@/components/site-footer"
+import { Hero } from "@/components/hero"
+import { PracticeStrip } from "@/components/practice-strip"
+import { SelectedWork } from "@/components/selected-work"
+import { Capabilities } from "@/components/capabilities"
+import { Approach } from "@/components/approach"
+import { Stack } from "@/components/stack"
+import { About } from "@/components/about"
+import { Contact } from "@/components/contact"
+
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-3 p-8 text-center">
-      <h1 className="text-3xl font-medium tracking-tight">
-        Starter ready — let&apos;s build this together
-      </h1>
-      <p className="text-sm text-neutral-500">
-        Follow along with the video to build each section from here.
-      </p>
-    </main>
+    <>
+      <SiteHeader />
+      <main>
+        <Hero />
+        <PracticeStrip />
+        <SelectedWork />
+        <Capabilities />
+        <Approach />
+        <Stack />
+        <About />
+        <Contact />
+      </main>
+      <SiteFooter />
+    </>
   )
 }
