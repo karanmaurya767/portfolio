@@ -21,19 +21,23 @@ export function About() {
             id="about-heading"
             className="mt-2 text-3xl font-medium tracking-tight text-ink sm:text-4xl"
           >
-            I work with small, opinionated teams on products that have to ship.
+            I build production web applications for small teams and growing businesses.
           </h2>
           <div className="mt-6 space-y-4 text-body">
             <p>
-              Six years building production software for early-stage teams. I
-              came up through backend systems and then grew into product design
-              and front-end engineering — which is why my work tends to look
-              like an architect drew the interface.
+              I'm a Full Stack Developer based in Varanasi, India, currently
+              working at Shubham Infotech as a Software Developer since July
+              2025. Over the past year I've led the development and deployment
+              of 7+ dynamic web applications — MLM platforms, e-commerce
+              stores, NGO portals, and student management systems — all
+              built on Laravel, MySQL, and modern frontend stacks.
             </p>
             <p>
-              I take on a small number of builds a year and stay close to the
-              work: scoping, designing, building, and shipping alongside the
-              founders I work with.
+              I take ownership of the full SDLC: from requirement analysis
+              and database design, through API and frontend development, all
+              the way to production deployment on cPanel or Vercel. I work
+              directly with clients, translate business needs into technical
+              features, and ship work that's actually used by real people.
             </p>
           </div>
         </Reveal>

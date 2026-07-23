@@ -14,21 +14,22 @@
 
 // --- Site identity --------------------------------------------------------
 export const SITE = {
-  name: "Karan Maurya",
+  name: "Karan Kushawaha",
   shortName: "Karan",
-  role: "AI-First Full-Stack Engineer",
-  location: "India · GMT +5:30",
+  role: "Full Stack Developer · Laravel & Flask Specialist",
+  location: "Varanasi, Uttar Pradesh, India · GMT +5:30",
   email: "kmkaranmaurya767@gmail.com",
   emailShort: "kmkaranmaurya767",
   github: "https://github.com/karanmaurya767",
   githubHandle: "karanmaurya767",
   linkedin: "https://www.linkedin.com/in/karanmaurya767",
-  twitter: "https://x.com/karanmaurya767",
+  twitter: "https://x.com/Nagumi38748",
+  resumeUrl: "https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf",
   // Hero headline copy.
-  heroEyebrow: "Independent · Available for selected product builds",
-  heroTitle: "Building the next generation of AI-first products.",
+  heroEyebrow: "Software Developer @ Shubham Infotech · Available for new projects",
+  heroTitle: "Building production-grade web apps that ship.",
   heroSubtitle:
-    "I'm Karan — a full-stack engineer and product designer based in India. I help early-stage teams ship AI SaaS products end-to-end: from workflow design and architecture to the production interface.",
+    "I'm Karan Kushawaha — a Full Stack Developer based in Varanasi, India. I design, develop, and deploy scalable web applications end-to-end: from database schema and backend APIs to polished, responsive interfaces.",
   heroCtaPrimary: "See selected work",
   heroCtaSecondary: "Start a project",
 } as const
@@ -46,11 +47,11 @@ export const NAV_LINKS = [
 // --- Practice strip -------------------------------------------------------
 // components/practice-strip.tsx — the thin band of practice areas.
 export const PRACTICE_AREAS = [
-  { k: "01", v: "AI SaaS products" },
-  { k: "02", v: "Full-stack systems" },
-  { k: "03", v: "Workflow automation" },
-  { k: "04", v: "Product UI" },
-  { k: "05", v: "API-first architecture" },
+  { k: "01", v: "MLM & Network Platforms" },
+  { k: "02", v: "E-commerce Solutions" },
+  { k: "03", v: "NGO & Social Portals" },
+  { k: "04", v: "Student Management" },
+  { k: "05", v: "Animated Frontends" },
 ] as const
 
 // --- Selected work --------------------------------------------------------
@@ -70,68 +71,75 @@ export type Project = {
 export const PROJECTS: readonly Project[] = [
   {
     index: "01",
-    title: "AI Interior Design Platform",
+    title: "FS Foundations — MLM Platform",
     description:
-      "A workflow-driven SaaS product for interior designers and architects, combining image transformation, regional processing, and public API delivery.",
-    year: "2026",
-    status: "Live · v3.2",
-    tags: ["AI SaaS", "Image workflows", "API", "B2B"],
-    href: "#",
+      "Highly scalable MLM system built on Laravel with integrated transaction processing, multi-tier account management, and real-time downline tracking. Serves active network of distributors.",
+    year: "2025",
+    status: "Live · Production",
+    tags: ["Laravel", "MySQL", "PHP", "Tailwind CSS"],
+    href: "https://fsfoundations.com",
     image: "/assets/projects/interior-design-platform.png",
-    imageAlt:
-      "Interior design platform UI showing a before/after room render with a materials palette and a generate-design control bar.",
+    imageAlt: "FS Foundations MLM platform dashboard showing network hierarchy and transaction history.",
   },
   {
     index: "02",
-    title: "AI Headshot Generator",
+    title: "Nilexuma — MLM System",
     description:
-      "A polished consumer and team headshot experience with model training, image editing, credits, and premium generation flows.",
+      "Customized MLM framework with automated account tier tracking, referral-based commission engine, and real-time downline management for an active distributor network.",
     year: "2025",
-    status: "Live",
-    tags: ["AI Images", "Product UX", "Credits", "Teams"],
-    href: "#",
+    status: "Live · Production",
+    tags: ["Laravel", "MySQL", "REST APIs", "Bootstrap"],
+    href: "https://nilexuma.com",
     image: "/assets/projects/headshot-generator.png",
-    imageAlt:
-      "AI headshot generator UI with a grid of generated professional portraits, style and lighting controls, and a credits counter.",
+    imageAlt: "Nilexuma MLM system showing tier tracking and commission dashboard.",
   },
   {
     index: "03",
-    title: "Automation & Agent Systems",
+    title: "WayCrest — E-commerce + MLM",
     description:
-      "Internal tools, workflow engines, and agent-backed systems designed to reduce manual operations and speed up product execution.",
-    year: "2024",
-    status: "Private",
-    tags: ["Automation", "Agents", "Workflows", "Infra"],
-    href: "#",
+      "Comprehensive e-commerce platform with referral-based MLM downline integration. Product catalog, shopping cart, and integrated payment gateway for an organic products business.",
+    year: "2025",
+    status: "Live · Production",
+    tags: ["Laravel", "MySQL", "E-commerce", "Payment Gateway"],
+    href: "https://waycrest.mbizz.in",
     image: "/assets/projects/automation-agent-systems.png",
-    imageAlt:
-      "Dark automation dashboard showing an agent workflow node graph alongside a live event stream and run log.",
+    imageAlt: "WayCrest e-commerce product catalog with referral MLM downline panel.",
   },
   {
     index: "04",
-    title: "Document Intelligence",
+    title: "Bhudev — NGO Portal",
     description:
-      "Extraction, classification, and review tooling that turns dense unstructured documents into structured, queryable records.",
-    year: "2024",
-    status: "Live",
-    tags: ["NLP", "Extraction", "Review UX", "Pipelines"],
-    href: "#",
+      "Public charity portal with payment gateway integration for online donations, campaign tracking, and donor management. Built for an active social-impact organization.",
+    year: "2025",
+    status: "Live · Production",
+    tags: ["Laravel", "MySQL", "Payment API", "cPanel"],
+    href: "https://bhudev.mbizz.in",
     image: "/assets/projects/document-intelligence.png",
-    imageAlt:
-      "Document intelligence UI extracting structured fields from an invoice, with a review queue and confidence indicators.",
+    imageAlt: "Bhudev NGO portal showing donation campaigns and donor management dashboard.",
   },
   {
     index: "05",
-    title: "Data Labeling Platform",
+    title: "Flask EMS — Employee Management",
     description:
-      "A collaborative annotation surface with quality controls, reviewer queues, and exports tuned for fast model iteration.",
-    year: "2023",
-    status: "Live",
-    tags: ["Labeling", "Collaboration", "QA", "Tooling"],
-    href: "#",
+      "Full-featured CRUD-based Employee Management System built with Python Flask, SQLAlchemy, and MySQL. Includes user authentication, session management, and is deployed live on Vercel.",
+    year: "2026",
+    status: "Live · v1.0",
+    tags: ["Python", "Flask", "SQLAlchemy", "MySQL"],
+    href: "https://flask-app-indol-one.vercel.app/",
     image: "/assets/projects/data-labeling-platform.png",
-    imageAlt:
-      "Data labeling platform annotating a room scene with bounding boxes, a reviewer queue, and a quality score panel.",
+    imageAlt: "Flask EMS dashboard with employee CRUD operations, login auth, and session tracking.",
+  },
+  {
+    index: "06",
+    title: "Pi Brains — Portfolio Platform",
+    description:
+      "Custom designed portfolio site with GSAP-powered animations, dynamic motion effects, and a full-stack contact portal. Showcases my development philosophy and selected work.",
+    year: "2026",
+    status: "Live · v2.0",
+    tags: ["TypeScript", "Next.js", "GSAP", "Tailwind CSS"],
+    href: "https://pibrains.com",
+    image: "/assets/projects/interior-design-platform.png",
+    imageAlt: "Pi Brains portfolio landing page with GSAP animations and full-stack contact form.",
   },
 ]
 
@@ -141,41 +149,44 @@ export const PROJECTS: readonly Project[] = [
 export const CAPABILITIES = [
   {
     num: "— 01",
-    title: "Product engineering",
-    body: "End-to-end SaaS systems built for actual production load. Type-safe APIs, predictable data layers, and a frontend that survives real users without ceremony.",
+    title: "Backend & Database",
+    body: "Production-grade server logic with clean architecture, optimized queries, and rock-solid data integrity. Built for real user load, not just demos.",
     items: [
-      "Next.js",
-      "Hono / tRPC",
-      "Postgres",
-      "Drizzle",
-      "Stripe",
-      "Edge / Workers",
+      "Laravel",
+      "PHP",
+      "Flask",
+      "Python",
+      "MySQL",
+      "REST APIs",
+      "MVC Architecture",
     ],
   },
   {
     num: "— 02",
-    title: "AI workflow systems",
-    body: "Image, text, and agent pipelines that respect latency, cost, and failure modes. The hard parts — queues, retries, observability — built in from day one.",
+    title: "Frontend & UI",
+    body: "Responsive, accessible interfaces with calm typography and considered motion. Tailwind-first workflows with hand-tuned CSS where it matters.",
     items: [
-      "OpenAI",
-      "Replicate",
-      "Vercel AI SDK",
-      "Inngest",
-      "Queues",
-      "Vector DBs",
+      "HTML5",
+      "CSS3",
+      "JavaScript ES6+",
+      "Tailwind CSS",
+      "Bootstrap",
+      "GSAP",
+      "AOS Animation",
     ],
   },
   {
     num: "— 03",
-    title: "Interface design",
-    body: "Calm, opinionated product UI with restraint. Typography, hierarchy, and motion treated as engineering disciplines — not decoration applied at the end.",
+    title: "DevOps & Deployment",
+    body: "Version control, hosting, and shipping pipelines that don't get in the way. From local development to production, every step is reproducible.",
     items: [
-      "Design systems",
-      "Tailwind",
-      "Radix / shadcn",
-      "Framer Motion",
-      "Figma",
-      "Prototyping",
+      "Git & GitHub",
+      "Vercel",
+      "cPanel",
+      "AWS S3",
+      "XAMPP",
+      "HeidiSQL",
+      "Postman",
     ],
   },
 ] as const
@@ -185,23 +196,23 @@ export const CAPABILITIES = [
 export const APPROACH_STEPS = [
   {
     k: "— Step 01",
-    t: "Understand the business goal",
-    d: "Before any UI or schema. What does this product change for the people using it, and how do we know it worked?",
+    t: "Understand the requirement",
+    d: "Before any code, I sit with the client to understand the business problem, the users, and the success criteria. What does this product change for the people using it?",
   },
   {
     k: "— Step 02",
-    t: "Design the smallest useful product",
-    d: "The shortest path between a real user and a real outcome. Everything else is deferred until the core is honest.",
+    t: "Design the data layer",
+    d: "Database schemas, relationships, and API contracts get drafted first. This forces clarity on what the system actually does, before we touch the UI.",
   },
   {
     k: "— Step 03",
-    t: "Build with production architecture",
-    d: "Type-safe from edge to database. Observability, retries, and migrations as first-class — not bolted on under pressure.",
+    t: "Build the backend & APIs",
+    d: "Laravel or Flask endpoints with proper validation, authentication, and error handling. Each route tested with Postman before the frontend sees it.",
   },
   {
     k: "— Step 04",
-    t: "Refine until it feels effortless",
-    d: "The last 20% is where products stop feeling like demos. Latency, copy, motion, edge cases — sanded down until they disappear.",
+    t: "Ship the polished frontend",
+    d: "Responsive, animated, accessible UI built with Tailwind. Tested across devices, deployed via Vercel or cPanel, and monitored post-launch.",
   },
 ] as const
 
@@ -209,41 +220,46 @@ export const APPROACH_STEPS = [
 // components/stack.tsx — the editor-mockup panes. Each item is [name, tag].
 export const STACK_PANES = [
   {
-    title: "Application",
+    title: "Backend",
     items: [
-      ["Next.js", "framework"],
+      ["Laravel", "framework"],
+      ["PHP", "language"],
+      ["Flask", "framework"],
+      ["Python", "language"],
+      ["MySQL", "database"],
+      ["REST APIs", "integration"],
+    ],
+  },
+  {
+    title: "Frontend",
+    items: [
+      ["HTML5 / CSS3", "core"],
+      ["JavaScript ES6+", "language"],
       ["TypeScript", "language"],
-      ["React 19", "ui"],
       ["Tailwind CSS", "styling"],
-      ["Radix / shadcn", "primitives"],
+      ["Bootstrap", "ui-kit"],
+      ["GSAP / AOS", "animation"],
     ],
   },
   {
-    title: "Server & data",
+    title: "Tools & Workflow",
     items: [
-      ["Node.js / Hono", "runtime"],
-      ["Postgres", "database"],
-      ["Drizzle ORM", "data"],
-      ["Cloudflare", "edge"],
-      ["Vercel", "deploy"],
+      ["Git", "version-control"],
+      ["GitHub", "remote"],
+      ["VS Code", "editor"],
+      ["Postman", "api-testing"],
+      ["HeidiSQL", "db-client"],
+      ["XAMPP", "local-stack"],
     ],
   },
   {
-    title: "AI & workflows",
+    title: "Deployment",
     items: [
-      ["Vercel AI SDK", "orchestration"],
-      ["OpenAI / Anthropic", "models"],
-      ["Replicate", "image"],
-      ["Inngest", "workflows"],
-    ],
-  },
-  {
-    title: "Infra",
-    items: [
-      ["Docker", "runtime"],
-      ["Resend", "email"],
-      ["Stripe", "payments"],
-      ["PostHog / Sentry", "observability"],
+      ["Vercel", "frontend-host"],
+      ["cPanel", "shared-host"],
+      ["AWS S3", "storage"],
+      ["GitHub Actions", "ci-cd"],
+      ["Custom Domains", "dns"],
     ],
   },
 ] as const
@@ -251,11 +267,13 @@ export const STACK_PANES = [
 // --- About ----------------------------------------------------------------
 // components/contact.tsx (About band) — the meta definition list. [key, value].
 export const ABOUT_META = [
-  ["Based", "India · GMT +5:30"],
-  ["Practice", "AI-first SaaS products"],
-  ["Years shipping", "6+"],
-  ["Availability", "Selected product builds"],
-  ["Engagements", "Fractional · Build · Advisory"],
+  ["Based", "Varanasi, UP, India"],
+  ["Role", "Full Stack Developer"],
+  ["Company", "Shubham Infotech"],
+  ["Experience", "1+ year production"],
+  ["Education", "BCA (Pursuing 2025-26)"],
+  ["Speciality", "Laravel + MySQL stacks"],
+  ["Availability", "Open to opportunities"],
 ] as const
 
 // --- Site footer ----------------------------------------------------------
@@ -273,24 +291,30 @@ export const FOOTER_COLUMNS = [
     ],
   },
   {
-    title: "Contact",
+    title: "Projects",
     links: [
-      ["Email", "mailto:kmkaranmaurya767@gmail.com"],
-      ["Start a project", "#contact"],
+      ["FS Foundations", "https://fsfoundations.com"],
+      ["Nilexuma", "https://nilexuma.com"],
+      ["WayCrest", "https://waycrest.mbizz.in"],
+      ["Bhudev NGO", "https://bhudev.mbizz.in"],
+      ["Pi Brains", "https://pibrains.com"],
     ],
   },
   {
-    title: "Social",
+    title: "Connect",
     links: [
       ["GitHub", "https://github.com/karanmaurya767"],
       ["LinkedIn", "https://www.linkedin.com/in/karanmaurya767"],
-      ["X / Twitter", "https://x.com/karanmaurya767"],
+      ["Email", "mailto:kmkaranmaurya767@gmail.com"],
+      ["Resume PDF", "https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf"],
     ],
   },
 ] as const
 
 // --- Token-usage widget ---------------------------------------------------
 // components/widgets/token-usage.tsx — sample usage rows.
+// (Kept as generic placeholder — not part of my day-to-day but
+// matches the design system without changing layout.)
 export type Vendor = "Anthropic" | "OpenAI" | "Google" | "Mistral"
 
 export type UsageRow = {

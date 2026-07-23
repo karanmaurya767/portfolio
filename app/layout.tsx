@@ -15,6 +15,32 @@ const fontMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" })
 export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.role}`,
   description: SITE.heroSubtitle,
+  keywords: [
+    "Karan Kushawaha",
+    "Full Stack Developer",
+    "Laravel",
+    "Flask",
+    "MySQL",
+    "MLM Platform",
+    "E-commerce",
+    "NGO Portal",
+    "Varanasi",
+    "Shubham Infotech",
+  ],
+  authors: [{ name: SITE.name }],
+  creator: SITE.name,
+  openGraph: {
+    title: `${SITE.name} — ${SITE.role}`,
+    description: SITE.heroSubtitle,
+    type: "website",
+    url: "https://portfolio-ochre-nu-74.vercel.app",
+    siteName: `${SITE.name} Portfolio`,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.role}`,
+    description: SITE.heroSubtitle,
+  },
 }
 
 type RootLayoutProps = Readonly<{

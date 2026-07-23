@@ -1,10 +1,13 @@
-# Karan Maurya — Portfolio
+# Karan Kushawaha — Portfolio
 
 A modern, editorial developer portfolio built with **Next.js 16**, **Tailwind CSS v4**, and **Motion** (Framer Motion). Features a signature day/night hero switch, keyless live visitor-location + weather widget, animated AI token-usage card, an editorial design system, and choreographed scroll animations.
 
 ![Portfolio hero — day mode](./public/assets/hero-day-poster.webp)
 
-🌐 **Live:** _(add your deployment URL here)_
+🌐 **Live:** https://portfolio-ochre-nu-74.vercel.app
+💼 **Developer:** Karan Kushawaha — Full Stack Developer
+🏢 **Currently:** Software Developer @ Shubham Infotech, Varanasi
+📧 **Contact:** kmkaranmaurya767@gmail.com
 
 ---
 
@@ -170,3 +173,4 @@ MIT — use it for whatever you want, attribution appreciated but not required.
 - Tutorial starter by [CodeBucks](https://github.com/codebucks27) — this is a fork of his excellent Next.js 16 portfolio tutorial.
 - Background video assets, project mockups, and the original content skeleton came from that starter.
 - Day/night switch, widgets, animations, contact form, and footer were implemented on top of it.
+- Content personalised and adapted by **Karan Kushawaha** — Full Stack Developer based in Varanasi, India. All project copy, capabilities, stack, and about copy now reflect real production work.
