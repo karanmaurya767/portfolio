@@ -204,7 +204,7 @@ export function Contact() {
                   href={SITE.linkedin}
                   icon={<LinkedinLogo size={18} weight="duotone" />}
                   label="LinkedIn"
-                  value="Karan Maurya"
+                  value="Karan Kushawaha"
                 />
                 <SocialLink
                   href={SITE.twitter}

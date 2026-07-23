@@ -53,7 +53,7 @@ export function SelectedWork() {
                 id="work-heading"
                 className="mt-2 text-3xl font-medium tracking-tight text-ink sm:text-4xl"
               >
-                A small, honest body of work.
+                11+ production apps I designed, built, and shipped.
               </h2>
             </div>
             <div className="flex items-center gap-2">
@@ -102,11 +102,25 @@ export function SelectedWork() {
               ))}
             </div>
 
+            {project.metrics && project.metrics.length > 0 && (
+              <ul className="mt-5 grid grid-cols-1 gap-1.5 border-t border-hairline pt-4 sm:grid-cols-3">
+                {project.metrics.map((m) => (
+                  <li
+                    key={m}
+                    className="text-xs text-muted-ink"
+                  >
+                    <span className="mr-1 text-primary">●</span>
+                    {m}
+                  </li>
+                ))}
+              </ul>
+            )}
+
             <a
               href={project.href}
               className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-hairline-strong bg-surface-card px-4 py-2 text-sm text-ink transition-colors hover:bg-surface-strong"
             >
-              View case study
+              View live project
               <ArrowUpRight size={14} weight="bold" />
             </a>
 

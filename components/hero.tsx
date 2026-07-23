@@ -64,6 +64,15 @@ export function Hero() {
             >
               {SITE.heroCtaSecondary}
             </a>
+            <a
+              href={SITE.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex h-11 items-center gap-2 rounded-full border border-overlay-cream/55 bg-overlay-ink/30 px-5 text-sm text-overlay-cream backdrop-blur transition-colors hover:bg-overlay-ink/50"
+            >
+              {SITE.heroCtaResume}
+              <ArrowUpRight size={16} weight="bold" />
+            </a>
             <div className="flex items-center gap-2 rounded-full border border-overlay-cream/30 bg-overlay-ink/30 px-3 py-1 backdrop-blur sm:ml-2">
               <span className="text-xs uppercase tracking-[0.14em] text-overlay-cream/80">
                 {mode === "sun" ? "Day" : "Night"}

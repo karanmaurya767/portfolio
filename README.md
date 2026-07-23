@@ -1,6 +1,6 @@
 # Karan Kushawaha — Portfolio
 
-A modern, editorial developer portfolio built with **Next.js 16**, **Tailwind CSS v4**, and **Motion** (Framer Motion). Features a signature day/night hero switch, keyless live visitor-location + weather widget, animated AI token-usage card, an editorial design system, and choreographed scroll animations.
+A modern, editorial developer portfolio built with **Next.js 16**, **Tailwind CSS v4**, and **Motion** (Framer Motion). Features a signature day/night hero switch, keyless live visitor-location widget, real portfolio stats, an editorial design system, and choreographed scroll animations.
 
 ![Portfolio hero — day mode](./public/assets/hero-day-poster.webp)
 
@@ -8,21 +8,23 @@ A modern, editorial developer portfolio built with **Next.js 16**, **Tailwind CS
 💼 **Developer:** Karan Kushawaha — Full Stack Developer
 🏢 **Currently:** Software Developer @ Shubham Infotech, Varanasi
 📧 **Contact:** kmkaranmaurya767@gmail.com
+📄 **Resume:** [Download PDF](https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf)
 
 ---
 
 ## ✨ Features
 
 - 🌗 **Interactive day/night hero switch** — swaps a day background video for a night one with smooth Motion choreography.
-- 📍 **Live visitor location + real-time weather** — server keyless, uses `ipwho.is` + Open-Meteo.
-- 📊 **Animated AI token-usage widget** — bars grow on mount with reduced-motion support.
+- 📍 **Live visitor location** — server keyless, uses `ipwho.is` for geolocation display.
+- 📊 **Real portfolio stats widget** — 11+ projects, 4 categories, 1+ year, 16 repos — counts up on mount with reduced-motion support.
 - 🎨 **Editorial design system** — warm cream canvas, hairline borders (no shadows), light display type, one orange accent.
-- 🖼️ **Selected Work** — animated project carousel with keyboard navigation.
-- 🧩 **Capabilities** — three practice cards with hand-crafted animated SVG icons.
+- 🖼️ **Selected Work** — animated project carousel with 11 production projects, keyboard navigation, per-project metrics.
+- 🧩 **Capabilities** — three practice cards (Backend, Frontend, DevOps) with hand-crafted animated SVG icons.
 - 🪜 **Approach**, faux code-editor **Stack**, **About** + **Contact** sections.
 - 📩 **Working contact form** — opens the user's email client with a pre-filled message (no backend required).
 - 🧭 **Scroll-aware header** with mobile menu drawer, matching media-backed footer.
 - 🎬 **Motion animations** — scroll reveals via a reusable `Reveal` component, with full `prefers-reduced-motion` support.
+- 📄 **Resume download button** in hero CTA row — direct PDF link.
 - 📱 **Fully responsive** and content-centralized for easy edits.
 
 ---

@@ -24,14 +24,16 @@ export const SITE = {
   githubHandle: "karanmaurya767",
   linkedin: "https://www.linkedin.com/in/karanmaurya767",
   twitter: "https://x.com/Nagumi38748",
-  resumeUrl: "https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf",
+  resumeUrl:
+    "https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf",
   // Hero headline copy.
-  heroEyebrow: "Software Developer @ Shubham Infotech · Available for new projects",
-  heroTitle: "Building production-grade web apps that ship.",
+  heroEyebrow: "Available for new opportunities · Open to work",
+  heroTitle: "Building production web apps that ship.",
   heroSubtitle:
-    "I'm Karan Kushawaha — a Full Stack Developer based in Varanasi, India. I design, develop, and deploy scalable web applications end-to-end: from database schema and backend APIs to polished, responsive interfaces.",
+    "I'm Karan Kushawaha — a Full Stack Developer based in Varanasi, India. Currently building at Shubham Infotech. I design, develop, and deploy scalable web applications end-to-end: from database schema and backend APIs to polished, responsive interfaces.",
   heroCtaPrimary: "See selected work",
   heroCtaSecondary: "Start a project",
+  heroCtaResume: "Download resume",
 } as const
 
 // --- Site header ----------------------------------------------------------
@@ -62,6 +64,7 @@ export type Project = {
   description: string
   year: string
   status: string
+  metrics?: readonly string[]
   tags: readonly string[]
   href: string
   image: string
@@ -71,75 +74,157 @@ export type Project = {
 export const PROJECTS: readonly Project[] = [
   {
     index: "01",
-    title: "FS Foundations — MLM Platform",
+    title: "FS Foundation — NGO Platform",
     description:
-      "Highly scalable MLM system built on Laravel with integrated transaction processing, multi-tier account management, and real-time downline tracking. Serves active network of distributors.",
+      "A complete charity & welfare platform for Flowing Stream Foundation. Built member management, donation flow, success stories, and admin dashboard for a registered non-profit operating in Bihar.",
     year: "2025",
     status: "Live · Production",
+    metrics: ["Registered NGO", "7+ service verticals", "Full admin panel"],
     tags: ["Laravel", "MySQL", "PHP", "Tailwind CSS"],
     href: "https://fsfoundations.com",
-    image: "/assets/projects/interior-design-platform.png",
-    imageAlt: "FS Foundations MLM platform dashboard showing network hierarchy and transaction history.",
+    image: "/assets/projects/fs-foundations.svg",
+    imageAlt:
+      "FS Foundation homepage showing hero slider, services grid, and donation call-to-action for the registered charity.",
   },
   {
     index: "02",
-    title: "Nilexuma — MLM System",
+    title: "Nilexuma — Jewellery & Finance",
     description:
-      "Customized MLM framework with automated account tier tracking, referral-based commission engine, and real-time downline management for an active distributor network.",
+      "Jewellery e-commerce + financial services platform. Built product catalog, member area, and governance content. A real customer-facing product with active inventory and member accounts.",
     year: "2025",
     status: "Live · Production",
-    tags: ["Laravel", "MySQL", "REST APIs", "Bootstrap"],
+    metrics: ["Product catalog", "Member accounts", "Governance pages"],
+    tags: ["Laravel", "MySQL", "PHP", "Bootstrap"],
     href: "https://nilexuma.com",
-    image: "/assets/projects/headshot-generator.png",
-    imageAlt: "Nilexuma MLM system showing tier tracking and commission dashboard.",
+    image: "/assets/projects/nilexuma.svg",
+    imageAlt:
+      "Nilexuma Services homepage with jewellery branding, about section, and quick-links to product categories.",
   },
   {
     index: "03",
-    title: "WayCrest — E-commerce + MLM",
+    title: "Pragati — MLM Member Portal",
     description:
-      "Comprehensive e-commerce platform with referral-based MLM downline integration. Product catalog, shopping cart, and integrated payment gateway for an organic products business.",
+      "Multi-level marketing platform with role-based admin/member login, commission tracking, and member ID system. Built the full authentication flow and dashboard structure for distributor network operations.",
     year: "2025",
     status: "Live · Production",
-    tags: ["Laravel", "MySQL", "E-commerce", "Payment Gateway"],
-    href: "https://waycrest.mbizz.in",
-    image: "/assets/projects/automation-agent-systems.png",
-    imageAlt: "WayCrest e-commerce product catalog with referral MLM downline panel.",
+    metrics: ["Role-based auth", "MLM logic", "Member dashboard"],
+    tags: ["Laravel", "MySQL", "AJAX", "REST APIs"],
+    href: "https://pragati.mbizz.in",
+    image: "/assets/projects/pragati.svg",
+    imageAlt:
+      "Pragati Marketing login page with admin/member access, quick-login demo credentials, and modern card-based layout.",
   },
   {
     index: "04",
-    title: "Bhudev — NGO Portal",
+    title: "VedaCare — Member Portal",
     description:
-      "Public charity portal with payment gateway integration for online donations, campaign tracking, and donor management. Built for an active social-impact organization.",
+      "Member management system for an organic-products e-commerce platform. Built secure authentication, remember-me flow, and member area for the customer base.",
     year: "2025",
     status: "Live · Production",
-    tags: ["Laravel", "MySQL", "Payment API", "cPanel"],
-    href: "https://bhudev.mbizz.in",
-    image: "/assets/projects/document-intelligence.png",
-    imageAlt: "Bhudev NGO portal showing donation campaigns and donor management dashboard.",
+    metrics: ["Auth + sessions", "Member ID login", "Forgot password"],
+    tags: ["Laravel", "MySQL", "Bootstrap", "Sessions"],
+    href: "https://vedacare.mbizz.in",
+    image: "/assets/projects/vedacare.svg",
+    imageAlt:
+      "VedaCare login interface with member ID/email field, password input, and branded organic-products identity.",
   },
   {
     index: "05",
-    title: "Flask EMS — Employee Management",
+    title: "Bhudev — NGO Welfare Portal",
     description:
-      "Full-featured CRUD-based Employee Management System built with Python Flask, SQLAlchemy, and MySQL. Includes user authentication, session management, and is deployed live on Vercel.",
-    year: "2026",
-    status: "Live · v1.0",
-    tags: ["Python", "Flask", "SQLAlchemy", "MySQL"],
-    href: "https://flask-app-indol-one.vercel.app/",
-    image: "/assets/projects/data-labeling-platform.png",
-    imageAlt: "Flask EMS dashboard with employee CRUD operations, login auth, and session tracking.",
+      "Public charity portal for Bhudev Human Welfare Foundation. Built team management, member directory, donation flows, and event tracking for a registered welfare organization.",
+    year: "2025",
+    status: "Live · Production",
+    metrics: ["Team directory", "Donation flow", "Event tracking"],
+    tags: ["Laravel", "MySQL", "cPanel", "AJAX"],
+    href: "https://bhudev.mbizz.in",
+    image: "/assets/projects/bhudev.svg",
+    imageAlt:
+      "Bhudev Human Welfare Foundation homepage with hero slider, team grid, core values, and donation call-to-action.",
   },
   {
     index: "06",
-    title: "Pi Brains — Portfolio Platform",
+    title: "ShineOnCare — NGO Platform",
     description:
-      "Custom designed portfolio site with GSAP-powered animations, dynamic motion effects, and a full-stack contact portal. Showcases my development philosophy and selected work.",
-    year: "2026",
-    status: "Live · v2.0",
-    tags: ["TypeScript", "Next.js", "GSAP", "Tailwind CSS"],
+      "Charity platform for Shine On Care Foundation. Built donor tracking, event management, gallery system, and a live stats dashboard showing total donors, raised funds, and ongoing events.",
+    year: "2025",
+    status: "Live · Production",
+    metrics: ["Live stats", "Event system", "Donor tracking"],
+    tags: ["Laravel", "MySQL", "PHP", "cPanel"],
+    href: "https://shineoncare.mbizz.in",
+    image: "/assets/projects/shineoncare.svg",
+    imageAlt:
+      "ShineOnCare Foundation homepage with live donor count, raised funds counter, and upcoming events calendar.",
+  },
+  {
+    index: "07",
+    title: "Sri Krishna Foundation — Institute",
+    description:
+      "Educational institute portal for Shree Krishna Foundation. Built course listings, online applications, student zone, exam portal, and accreditation display for a registered society.",
+    year: "2025",
+    status: "Live · Production",
+    metrics: ["Society registered", "Student portal", "Online admissions"],
+    tags: ["Laravel", "MySQL", "Admin Panel", "cPanel"],
+    href: "https://srikrishnafoundation.com",
+    image: "/assets/projects/srikrishna.svg",
+    imageAlt:
+      "Sri Krishna Foundation educational institute portal with course listings, accreditation badges, and student zone links.",
+  },
+  {
+    index: "08",
+    title: "Pi Brains — Healthcare Agency Site",
+    description:
+      "Marketing & inquiry website for Pi Brains — a healthcare-focused web/software agency I co-built. Includes interactive feature showcase, pricing tiers, and a consultation-request flow with email dispatch.",
+    year: "2024",
+    status: "Live · Production",
+    metrics: ["Agency site", "Pricing tiers", "Consultation form"],
+    tags: ["React", "Next.js", "GSAP", "Custom CSS"],
     href: "https://pibrains.com",
-    image: "/assets/projects/interior-design-platform.png",
-    imageAlt: "Pi Brains portfolio landing page with GSAP animations and full-stack contact form.",
+    image: "/assets/projects/pibrains.svg",
+    imageAlt:
+      "Pi Brains healthcare agency homepage with hero section, value props, and consultation CTA for doctor/clinic clients.",
+  },
+  {
+    index: "09",
+    title: "Wiserfox — Loan Services",
+    description:
+      "Marketing site for Wiserfox Business Solutions — a loan & e-filing services company. Built team showcase, services catalog, enquiry form, and client testimonials.",
+    year: "2024",
+    status: "Live · Production",
+    metrics: ["6 loan services", "3 e-filing flows", "Enquiry form"],
+    tags: ["HTML", "CSS", "JavaScript", "cPanel"],
+    href: "https://wiserfox.co.in",
+    image: "/assets/projects/wiserfox.svg",
+    imageAlt:
+      "Wiserfox Business Solutions homepage with loan services catalog, e-filing offerings, and enquiry form.",
+  },
+  {
+    index: "10",
+    title: "Flask EMS — Employee Management",
+    description:
+      "Full-featured Employee Management System built with Python Flask. CRUD operations, SQLAlchemy ORM, MySQL persistence, user authentication, session management. Demonstrates recent Python/Flask work.",
+    year: "2026",
+    status: "Live · v1.0",
+    metrics: ["CRUD + auth", "MySQL backend", "Deployed on Vercel"],
+    tags: ["Python", "Flask", "SQLAlchemy", "MySQL"],
+    href: "https://flask-app-indol-one.vercel.app/",
+    image: "/assets/projects/flask-ems.svg",
+    imageAlt:
+      "Flask EMS dashboard with employee list, add/edit forms, and authentication flow built with Python and Flask.",
+  },
+  {
+    index: "11",
+    title: "FocusFlow — Pomodoro Timer",
+    description:
+      "Minimal Pomodoro-style focus timer. Vanilla JavaScript, HTML5, CSS3 — no framework, no build step. Live on Vercel. A small utility I built for daily use.",
+    year: "2025",
+    status: "Live · v1.0",
+    metrics: ["Zero dependencies", "Mobile responsive", "Live on Vercel"],
+    tags: ["JavaScript", "HTML5", "CSS3", "Vercel"],
+    href: "https://focus-flow-roan-five.vercel.app",
+    image: "/assets/projects/focusflow.svg",
+    imageAlt:
+      "FocusFlow Pomodoro timer interface with start/pause controls, session count, and clean minimal design.",
   },
 ]
 
@@ -272,6 +357,7 @@ export const ABOUT_META = [
   ["Company", "Shubham Infotech"],
   ["Experience", "1+ year production"],
   ["Education", "BCA (Pursuing 2025-26)"],
+  ["Certification", "NIELIT O-Level (Grade C)"],
   ["Speciality", "Laravel + MySQL stacks"],
   ["Availability", "Open to opportunities"],
 ] as const
@@ -291,13 +377,17 @@ export const FOOTER_COLUMNS = [
     ],
   },
   {
-    title: "Projects",
+    title: "Live Projects",
     links: [
-      ["FS Foundations", "https://fsfoundations.com"],
+      ["FS Foundation", "https://fsfoundations.com"],
       ["Nilexuma", "https://nilexuma.com"],
-      ["WayCrest", "https://waycrest.mbizz.in"],
+      ["Pragati", "https://pragati.mbizz.in"],
+      ["VedaCare", "https://vedacare.mbizz.in"],
       ["Bhudev NGO", "https://bhudev.mbizz.in"],
+      ["ShineOnCare", "https://shineoncare.mbizz.in"],
+      ["Sri Krishna", "https://srikrishnafoundation.com"],
       ["Pi Brains", "https://pibrains.com"],
+      ["Wiserfox", "https://wiserfox.co.in"],
     ],
   },
   {
@@ -306,27 +396,25 @@ export const FOOTER_COLUMNS = [
       ["GitHub", "https://github.com/karanmaurya767"],
       ["LinkedIn", "https://www.linkedin.com/in/karanmaurya767"],
       ["Email", "mailto:kmkaranmaurya767@gmail.com"],
-      ["Resume PDF", "https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf"],
+      [
+        "Resume PDF",
+        "https://github.com/karanmaurya767/karanmaurya767/raw/main/Karan_Kushawaha_Resume.pdf",
+      ],
     ],
   },
 ] as const
 
-// --- Token-usage widget ---------------------------------------------------
-// components/widgets/token-usage.tsx — sample usage rows.
-// (Kept as generic placeholder — not part of my day-to-day but
-// matches the design system without changing layout.)
-export type Vendor = "Anthropic" | "OpenAI" | "Google" | "Mistral"
-
-export type UsageRow = {
-  model: string
-  vendor: Vendor
-  tokens: number
-  costUsd: number
+// --- Stats widget ---------------------------------------------------------
+// components/widgets/usage-stats.tsx — replaced token-usage with real stats.
+export type Stat = {
+  label: string
+  value: string
+  hint?: string
 }
 
-export const TOKEN_USAGE: UsageRow[] = [
-  { model: "Opus 4.7", vendor: "Anthropic", tokens: 8_230_000, costUsd: 211 },
-  { model: "Sonnet 4.6", vendor: "Anthropic", tokens: 2_400_000, costUsd: 42 },
-  { model: "Haiku 4.5", vendor: "Anthropic", tokens: 1_140_000, costUsd: 19 },
-  { model: "GPT-5", vendor: "OpenAI", tokens: 730_000, costUsd: 12 },
-]
+export const QUICK_STATS: readonly Stat[] = [
+  { label: "Projects shipped", value: "11+", hint: "live in production" },
+  { label: "Categories", value: "4", hint: "MLM · NGO · Edu · E-com" },
+  { label: "Years building", value: "1+", hint: "at Shubham Infotech" },
+  { label: "Repos public", value: "16", hint: "on GitHub" },
+] as const
